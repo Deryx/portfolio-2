@@ -1,0 +1,293 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container-fluid > header {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container-fluid > header > div {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.container-fluid > header div > div:nth-child(1) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  font-size: 200%;
+  background: rgb(162,19,12);
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.container-fluid > header div > div:nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  font-size: 200%;
+  background: rgb(9,119,106);
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.container-fluid > header div > div:nth-child(3) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  font-size: 200%;
+  background: rgb(2,117,216);
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.container-fluid > header div > div:nth-child(4) {
+  margin-left: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.container-fluid > header div > div:nth-child(4) span:nth-of-type(1) {
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-size: 125%;
+}
+
+.container-fluid > header nav {
+  margin-top: 18px;
+}
+
+.container-fluid > header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-fluid > header nav ul li {
+  display: inline-flex;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.container-fluid > header nav ul li a {
+  display: block;
+  padding: 10px 0;
+  font-size: 85%;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  width: 100%;
+}
+
+.container-fluid > header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section header {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+
+section header h1 {
+  margin-top: 125px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+
+#home {
+  background-image: url(../images/backgrounds/background-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+#home div {
+  background: rgba(2,117,216, 0.95);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 250%;
+  text-align: center;
+}
+
+#home div div {
+  font-size: 125%;
+}
+
+section article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section article h4 {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+section article div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+section article div div {
+  background: rgb(34, 49, 63);
+  padding: 5px 10px;
+  margin: 10px;
+  text-align: center;
+  font-size: 80%;
+  color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 4px 6px -1px black;
+     -moz-box-shadow: 0 4px 6px -1px black;
+          box-shadow: 0 4px 6px -1px black;
+}
+
+#about header{
+  background-image: url(../images/backgrounds/me.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 15%;
+  overflow-x: hidden;
+}
+
+#about header h1 {
+  margin-top: 0;
+  padding-top: 125px;
+  width: 100%;
+  height: 300px;
+  background: rgba(112, 66, 20, 0.90);
+  z-index: 98;
+}
+
+#about p {
+  font-family: "Lato", sans-serif;
+  font-size: 110%;
+}
+
+#skills header {
+  background-image: url(../images/backgrounds/background-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills header h1 {
+  margin-top: 0;
+  padding-top: 125px;
+  width: 100%;
+  height: 300px;
+  background: rgba(89, 171, 227, 0.85);
+  z-index: 98;
+}
+
+#folio header {
+
+}
+
+#folio header h1 {
+  margin-top: 0;
+  padding-top: 125px;
+  width: 100%;
+  height: 300px;
+  background: rgba(189, 195, 199, 0.90);
+  z-index: 98;
+}
+
+#contact header {
+  background-image: url(../images/backgrounds/map-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#contact header h1 {
+  margin-top: 0;
+  padding-top: 125px;
+  width: 100%;
+  height: 300px;
+  background: rgba(38, 166, 91, 0.90);
+  z-index: 98;
+}
+
+#contact > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#contact div div {
+  margin: 20px;
+}
+
+#contact div div a {
+  text-align: center;
+  padding: 20px;
+  display: block;
+  background: rgb(2,117,216);
+  color: rgb(255, 255, 255);
+}
+
+#contact div div a:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(2,117,216);
+  border: 1px solid rgb(180, 180, 180);
+}
+
+.hidden {
+  display: none;
+}
+
+.bookTitle {
+  font-weight: bold;
+  font-style: italic;
+}
