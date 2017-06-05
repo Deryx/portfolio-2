@@ -175,7 +175,7 @@ section article div {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 section article div div {
@@ -242,10 +242,10 @@ section article div div {
 }
 
 #contact header {
-  background-image: url(../images/backgrounds/map-background.jpg);
+  background-image: url(../images/backgrounds/contact.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 #contact header h1 {
@@ -265,6 +265,18 @@ section article div div {
   justify-content: center;
 }
 
+#contact p {
+  font-size: 175%;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: rgb(38, 166, 91);
+}
+
+#contact p:nth-of-type(2) {
+  margin-top: 50px;
+}
+
 #contact div div {
   margin: 20px;
 }
@@ -281,6 +293,77 @@ section article div div {
   background: rgb(255, 255, 255);
   color: rgb(2,117,216);
   border: 1px solid rgb(180, 180, 180);
+}
+
+#contact form {
+  font-size: 80%;
+}
+
+#contact form .row {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+input[placeholder] {
+  color: rgb(205, 205, 205);
+}
+
+#contact .form-control {
+  border-radius: 0;
+  font-size: 95%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .form-group label {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .form-group button {
+  padding: 10px;
+  background: rgb(2,117,216);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+  font-size: 110%;
+}
+
+#contact .form-control input {
+  width: 100%;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+#contact .form-control textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+#contact form div:nth-of-type(4) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#contact form div:nth-of-type(4) div:nth-of-type(1) {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+#contact form div:nth-of-type(4) div:nth-of-type(2) {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+#contact form div:nth-of-type(4) input {
+  width: 98%;
 }
 
 .hidden {
