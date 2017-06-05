@@ -210,6 +210,8 @@ section article div div {
 #about p {
   font-family: "Lato", sans-serif;
   font-size: 110%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #skills header {
@@ -226,6 +228,11 @@ section article div div {
   height: 300px;
   background: rgba(89, 171, 227, 0.85);
   z-index: 98;
+}
+
+#skills div article {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #folio header {
@@ -263,6 +270,8 @@ section article div div {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #contact p {
