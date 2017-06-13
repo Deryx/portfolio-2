@@ -10,7 +10,7 @@ html, body {
 
 .container-fluid > header {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   width: 100%;
   height: 75px;
   position: fixed;
@@ -19,9 +19,8 @@ html, body {
 }
 
 .container-fluid > header > div {
-  display: flex;
-  flex-direction: row;
   padding: 10px;
+  float: left;
 }
 
 .container-fluid > header div > div:nth-child(1) {
@@ -29,12 +28,13 @@ html, body {
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 5px;
-  font-size: 200%;
+  font-size: 2em;
   background: rgb(162,19,12);
   width: 45px;
   height: 45px;
   text-align: center;
   border: 1px solid rgb(255, 255, 255);
+  float: left;
 }
 
 .container-fluid > header div > div:nth-child(2) {
@@ -42,12 +42,13 @@ html, body {
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 5px;
-  font-size: 200%;
+  font-size: 2em;
   background: rgb(9,119,106);
   width: 45px;
   height: 45px;
   text-align: center;
   border: 1px solid rgb(255, 255, 255);
+  float: left;
 }
 
 .container-fluid > header div > div:nth-child(3) {
@@ -55,54 +56,66 @@ html, body {
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 5px;
-  font-size: 200%;
+  font-size: 2em;
   background: rgb(2,117,216);
   width: 45px;
   height: 45px;
   text-align: center;
   border: 1px solid rgb(255, 255, 255);
+  float: left;
 }
 
 .container-fluid > header div > div:nth-child(4) {
   margin-left: 5px;
   color: rgb(255, 255, 255);
+  float: left;
 }
 
 .container-fluid > header div > div:nth-child(4) span:nth-of-type(1) {
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
-  font-size: 125%;
+  font-size: 1.25em;
 }
 
 .container-fluid > header nav {
-  margin-top: 18px;
+  float: right;
+  margin-right: 20px;
 }
 
-.container-fluid > header nav ul {
+#nav-menu {
+  display: none;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#nav-menu:hover {
+  text-decoration: none;
+}
+
+.nav-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
+  padding-top: 18px;
+  list-style-type: none;
+  float: right;
 }
 
-.container-fluid > header nav ul li {
-  display: inline-flex;
-  flex-grow: 1;
+.nav-list li {
   text-align: center;
+  float: left;
 }
 
-.container-fluid > header nav ul li a {
+.nav-list li a {
   display: block;
-  padding: 10px 0;
-  font-size: 85%;
+  padding: 10px 20px;
+  font-size: 0.8em;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  width: 100%;
 }
 
-.container-fluid > header nav ul li a:hover {
+.nav-list li a:hover {
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -149,12 +162,14 @@ section header h1 {
   color: rgb(255, 255, 255);
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 250%;
+  font-size: 2.5em;
   text-align: center;
 }
 
-#home div div {
-  font-size: 125%;
+#home > div {
+  font-size: 250%;
+  padding-left: 20px ;
+  padding-right: 20px;
 }
 
 section article {
@@ -195,7 +210,7 @@ section article div div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% 15%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #about header h1 {
@@ -212,6 +227,7 @@ section article div div {
   font-size: 110%;
   margin-left: 20px;
   margin-right: 20px;
+  text-align: justify;
 }
 
 #skills header {
@@ -236,7 +252,10 @@ section article div div {
 }
 
 #folio header {
-
+  background-image: url(../images/backgrounds/background-6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #folio header h1 {
@@ -244,7 +263,7 @@ section article div div {
   padding-top: 125px;
   width: 100%;
   height: 300px;
-  background: rgba(189, 195, 199, 0.90);
+  background: rgba(207, 0, 15, 0.90);
   z-index: 98;
 }
 
@@ -382,4 +401,72 @@ input[placeholder] {
 .bookTitle {
   font-weight: bold;
   font-style: italic;
+}
+
+/* ******************** MEDIA QUERIES ********************* */
+
+@media screen and (max-width: 934px) {
+  nav {
+    margin-top: -75px;
+  }
+
+  #nav-menu {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    padding: 20px 10px;
+    font-weight: 800;
+    font-size: 1.5em;
+    float: right;
+  }
+
+  .nav-list {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    height: 0;
+  }
+
+  .nav-list li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-open {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 515px) and (max-width: 935px) {
+  #nav-menu {
+    padding-top: 95px;
+  }
+
+  .nav-list {
+    position: absolute;
+    left: 0;
+    top: 75px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  header div div:nth-of-type(1), header div div:nth-of-type(2), header div div:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  header div div:nth-of-type(4) span:last-child {
+    display: none;
+  }
+
+  header div div:nth-of-type(4) {
+    margin-top: 13px;
+    margin-bottom: -13px;
+  }
+
+  header nav {
+    margin-top: -50px;
+  }
 }
