@@ -123,6 +123,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgb(245, 245, 245);
 }
 
 section header {
@@ -267,6 +268,71 @@ section article div div {
   z-index: 98;
 }
 
+/* ********************************************************************
+*                        PORTFOLIO SLIDER                             *
+********************************************************************* */
+
+#folio .slide-viewer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 432px;
+}
+
+#folio .slide-group {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#folio .slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+
+#folio .slide:first-child {
+    display: block;
+}
+
+#folio .row {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;0
+}
+
+#folio .col-md-6 {
+  width: 288px;
+  height: 216px;
+  margin: 10px;
+}
+
+#folio .slide-buttons {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 690px;
+    text-align: center;
+    z-index: 99;
+}
+
+#folio .slide-buttons button {
+    border: none;
+    background: none;
+}
+
+#folio .slide-btn {
+    font-size: 3em;
+}
+
+#folio .active {
+    color: #FF0000;
+}
+
 #contact header {
   background-image: url(../images/backgrounds/contact.jpg);
   background-size: cover;
@@ -320,7 +386,7 @@ section article div div {
 #contact div div a:hover {
   background: rgb(255, 255, 255);
   color: rgb(2,117,216);
-  border: 1px solid rgb(180, 180, 180);
+  border: 1px solid rgb(2,117,216);
 }
 
 #contact form {
@@ -435,6 +501,14 @@ input[placeholder] {
 
   .nav-open {
     height: auto;
+  }
+
+  #folio .slide-viewer {
+    height: 500px;
+  }
+
+  #folio .slide-buttons {
+    margin-top: 880px
   }
 }
 
