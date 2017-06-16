@@ -6,9 +6,6 @@ let portfolioModule = (function(){
     let windowWidth = window.screen.availWidth;
     let windowHeight = window.screen.availHeight;
 
-    $('section').css('min-height', windowHeight);
-    $('#home > div').css('min-height', windowHeight);
-
     /**********************************************************************
      *                          SECTION SCROLLER                          *
      **********************************************************************/
