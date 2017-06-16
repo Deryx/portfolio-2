@@ -142,20 +142,19 @@ section header h1 {
 }
 
 #home {
+  height: 450px;
+  padding-top: 100px;
   background-image: url(../images/backgrounds/background-4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow-x: hidden;
 }
 
 #home div {
-  background: rgba(2,117,216, 0.95);
-  margin: 0;
-  padding: 0;
+  background: rgba(0, 0, 0, 0.75);
   width: 100%;
-  height: 100%;
   z-index: 98;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,6 +170,10 @@ section header h1 {
   font-size: 250%;
   padding-left: 20px ;
   padding-right: 20px;
+}
+
+#work {
+  display: none;
 }
 
 section article {
@@ -276,7 +279,7 @@ section article div div {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 432px;
+  height: 350px;
 }
 
 #folio .slide-group {
@@ -315,7 +318,7 @@ section article div div {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 690px;
+    margin-top: 600px;
     text-align: center;
     z-index: 99;
 }
@@ -331,6 +334,7 @@ section article div div {
 
 #folio .active {
     color: #FF0000;
+    border: none;
 }
 
 #contact header {
@@ -476,6 +480,23 @@ input[placeholder] {
     margin-top: -75px;
   }
 
+  #home {
+    height: 350px;
+    font-size: 50%;
+  }
+
+  #about > header, #skills > header, #folio > header, #contact > header {
+    margin-top: 0;
+    height: 175px;
+  }
+
+  #skills header h1, #contact header h1, #folio header h1, #about header h1 {
+      margin: 0;
+      padding-top: 100px;
+      height: 175px;
+      font-size: 175%;
+  }
+
   #nav-menu {
     color: rgb(255, 255, 255);
     cursor: pointer;
@@ -503,12 +524,37 @@ input[placeholder] {
     height: auto;
   }
 
+  #about p {
+    font-size: 90%;
+  }
+
+  #about p:nth-of-type(2), #about p:nth-of-type(4) {
+    display: none;
+  }
+
+  #folio {
+    height: 430px;
+  }
+
   #folio .slide-viewer {
-    height: 500px;
+    text-align: center;
+  }
+
+  #folio .col-md-6 {
+    margin-top: -20px;
+    margin-bottom: -20px;
   }
 
   #folio .slide-buttons {
-    margin-top: 880px
+    margin-top: 350px;
+  }
+
+  #folio img {
+    width:80%;
+  }
+
+  #contact p {
+    font-size: 120%;
   }
 }
 
@@ -530,7 +576,7 @@ input[placeholder] {
   }
 }
 
-@media screen and (max-width: 341px) {
+@media screen and (max-width: 480px) {
   header div div:nth-of-type(4) span:last-child {
     display: none;
   }
@@ -542,5 +588,21 @@ input[placeholder] {
 
   header nav {
     margin-top: -50px;
+  }
+
+  #about p:nth-child(3), #about p:nth-child(5) {
+    display: none;
+  }
+
+  #contact p, #skills > div:nth-child(2), #folio > div:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  #folio {
+    height: 600px;
+  }
+
+  #folio .slide-buttons {
+    margin-top: 530px;
   }
 }
