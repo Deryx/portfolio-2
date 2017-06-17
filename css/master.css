@@ -80,6 +80,7 @@ html, body {
 .container-fluid > header nav {
   float: right;
   width: 100%;
+  margin-right: 10px;
 }
 
 input[type=checkbox]{
