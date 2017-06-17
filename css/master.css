@@ -80,6 +80,7 @@ html, body {
 .container-fluid > header nav {
   float: right;
   width: 100%;
+  margin-right: 10px;
 }
 
 input[type=checkbox]{
@@ -146,7 +147,6 @@ nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul li {
 nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul li:after {
   position:absolute;
   right:.25em;
-  content:"\203A";
   font: bold 1.4em sans-serif;
 }
 
