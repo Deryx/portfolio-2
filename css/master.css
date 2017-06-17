@@ -115,7 +115,7 @@ nav[role="custom-dropdown"] label {
   font-size: 1.1em;
   margin: 0;
   top: 20px;
-  right: 20px;
+  right: 30px;
 }
 
 nav[role="custom-dropdown"] label:after {
