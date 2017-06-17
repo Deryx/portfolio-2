@@ -80,7 +80,6 @@ html, body {
 .container-fluid > header nav {
   float: right;
   width: 100%;
-  margin-right: 20px;
 }
 
 input[type=checkbox]{
@@ -116,6 +115,7 @@ nav[role="custom-dropdown"] label {
   font-size: 1.1em;
   margin: 0;
   top: 20px;
+  right: 30px;
 }
 
 nav[role="custom-dropdown"] label:after {
@@ -173,7 +173,7 @@ ul {
   margin: 0;
   width: 100%;
   list-style: none;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 ul > li {
