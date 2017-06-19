@@ -16,7 +16,9 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap
 .min.css" integrity="sha384-
 y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
 crossorigin="anonymous">
+    <link rel="stylesheet" href="css/flexnav.css">
     <link href="css/master.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900|Roboto+Slab|Lato" rel="stylesheet">
 </head>
 <body>
@@ -33,12 +35,9 @@ crossorigin="anonymous">
             <span>Front-End/Back-End Web Developer</span>
           </div>
         </div>
-
-        <nav role="custom-dropdown">
-          <input type="checkbox" id="button">
-          <label for="button" onclick></label>
-
-          <ul>
+        <div class="menu-button">Menu</div>
+        <nav>
+          <ul data-breakpoint="800" class="flexnav">
             <li><a href="#home">home</a></li>
             <li><a href="#folio">portfolio</a></li>
             <li><a href="#skills">skills</a></li>
@@ -47,6 +46,7 @@ crossorigin="anonymous">
           </ul>
         </nav>
       </header>
+
 
       <section id="home" class="row">
           <header class="hidden">
@@ -75,10 +75,10 @@ crossorigin="anonymous">
               <div class="slide slide-1">
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="images/thumbnails/spanish-tutor.jpg" class="img-responsive" alt="My Spanish Tutor App">
+                    <a href="#" id="1"><img src="images/thumbnails/spanish-tutor.jpg" class="img-responsive" alt="My Spanish Tutor App"></a>
                   </div>
                   <div class="col-md-6">
-                    <img src="images/thumbnails/net-price-calculator.jpg"  class="img-responsive" alt="Net Price Calculator App">
+                    <a href="#" id="2"><img src="images/thumbnails/net-price-calculator.jpg"  class="img-responsive" alt="Net Price Calculator App"></a>
                   </div>
                 </div>
               </div>
@@ -236,12 +236,104 @@ crossorigin="anonymous">
 
     </div>
 
+    <!-- Background for lightbox -->
+    <div id="site-overlay"></div>
+
+    <!-- Lightbox content -->
+    <div id="lightbox-1">
+        <h2>case study: my spanish tutor</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>specs</h3>
+                <dl>
+                    <dt>company: </dt>
+                    <dd>personal</dd>
+                </dl>
+                <dl>
+                    <dt>technology: </dt>
+                    <dd>HTML5, CSS3, AngularJS, jQuery, jQueryUI, JavaScript, Animate.css, Bootstrap, JSON</dd>
+                </dl>
+                <dl>
+                    <dt>website: </dt>
+                    <dd><a href="http://deryx.github.io/spanish-tutor" target="_blank">http://deryx.github.io/spanish-tutor</a></dd>
+                </dl>
+            </div>
+            <div class="col-md-8">
+                <p><strong>My Spanish Tutor</strong> came about because I wanted to further learn how to program in AngularJS. This was my second foray into Angular programming.</p>
+                <p>
+                    I had been teaching myself Spanish for a while and I wanted a somewhat fun vehicle to continue my Spanish/Angular learning. So, I created a suite of tools to help with learning Spanish:
+
+                    <ul>
+                        <li><strong>flashcards</strong> to learn vocabulary and verb conjugation;</li>
+                        <li> <strong>vocabulary slider</strong> game where you slide spanish word tiles to their corresponding images and english definitions;</li>
+                        <li>a <strong>word scramble game</strong> where a jumbled spanish word is presented and it is your job to correctly unscramble the word;</li>
+                        <li>a <strong>word completion game</strong> where you are presented with incomplete spanish words and it is your job to fill in the blanks; and</li>
+                        <li>a <strong>verb conjugator game</strong> where you are presented with with a spanish verb and you have to conjugate the verb in the <strong>present</strong>, <strong>preterite</strong>, <strong>imperfect</strong> or <strong>future</strong> tenses (you choose).</li>
+                    </ul>
+                </p>
+                <p>At the moment, this is very basic, beginning Spanish. However, more functionality and difficulty will be added in the future as I learn more Spanish.
+
+                    <img src="images/my-spanish-tutor.png" />
+
+                    <img src="images/vocab-flashcard-1.png" />
+
+                    <img src="images/vocab-quiz-1.png" />
+
+                </p>
+            </div>
+        </div>
+        <div><span class="glyphicon glyphicon-remove"></span></div>
+    </div>
+
+    <div id="lightbox-2">
+        <h2>case study: net price calculator</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>specs</h3>
+                <dl>
+                    <dt>company: </dt>
+                    <dd>personal</dd>
+                </dl>
+                <dl>
+                    <dt>technology: </dt>
+                    <dd>HTML5, CSS3, AngularJS, jQuery, jQueryUI, JSON</dd>
+                </dl>
+                <dl>
+                    <dt>website: </dt>
+                    <dd><a href="http://deryx.github.io/npc" target="_blank">http://deryx.github.io/npc</a></dd>
+                </dl>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    After doing some fairly rudimentary programming in AngularJS, I decided it was time to create something a bit larger in scope. I had already created the original <strong>Net Price Calculator</strong> for my employer using <strong>ASP.NET MVC (C#)</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>jQuery</strong>, <strong>Bootstrap</strong> and <strong>XML</strong>. Since I was not saving or working with any sensitive data, I did not need a server to store or retrieve data. Therefore, this was a perfect project to use AngularJS since everything is done through the client.
+                </p>
+
+                <p>
+                    The application is essentially a wizard program, taking the user through 5 screens, if the student is independent, or 6 screens, if the student is dependent. The final screen is always the results. The application calculates a student's estimated family contribution (efc) using the Federal Methodology, the same methodology used when a student completes the Free Application for Federal Student Aid (FAFSA). On the results page, the student is presented with the College of New Rochelle's cost of attendance, total amount of state grants and scholarships, total amount of college grants and scholarships and the net amount the student is responsible for after all estimated aid is subtracted from the cost of attendance.
+
+                    <img src="images/npc-1.png" />
+
+                    <img src="images/npc-2.png" />
+
+                    <img src="images/npc-3.png" />
+
+                    <img src="images/npc-4.png" />
+
+                    <img src="images/npc-5.png" />
+
+                    <img src="images/npc-6.png" />
+                </p>
+            </div>
+        </div>
+        <div><span class="glyphicon glyphicon-remove"></span></div>
+    </div>
+
     <!-- Javascript -->
     <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-
+  <script src="scripts/jquery.flexnav.min.js" type="text/javascript"></script>
   <script src="scripts/application.js" type="text/javascript"></script>
   <script src="https://use.fontawesome.com/78e110017f.js"></script>
 </body>
