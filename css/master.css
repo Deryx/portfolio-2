@@ -14,13 +14,13 @@ html, body {
   width: 100%;
   height: 75px;
   position: fixed;
-  z-index: 99;
+  z-index: 100;
   background: rgba(0, 0, 0, 0.75);
 }
 
 .container-fluid > header > div {
   padding: 10px;
-  float: left;
+  height: 75px;
 }
 
 .container-fluid > header div > div:nth-child(1) {
@@ -77,119 +77,44 @@ html, body {
   font-size: 1.25em;
 }
 
-.container-fluid > header nav {
-  float: right;
-  width: 100%;
-}
-
-input[type=checkbox]{
-  position: absolute;
-  top: -9999px;
-  left: -9999px
-}
-
-label {
-  display: none;
-  cursor: pointer;
-  user-select: none;
-}
-
-nav[role="custom-dropdown"] {
-  position: relative;
-  margin-top: -195px;
-  float: right;
-}
-
-nav[role="custom-dropdown"] ul {
-  display: none;
-  height: 100%;
-  width: 100%;
-}
-
-nav[role="custom-dropdown"] label {
-  position: relative;
-  display: block;
-  width: 100%;
-  min-height: 2.25em;
-  padding: .45em;
-  font-size: 1.1em;
-  margin: 0;
-  top: 20px;
-  right: 30px;
-}
-
-nav[role="custom-dropdown"] label:after {
-  position: absolute;
-  right: .25em;
-  top: 118px;
-  content: "\2261";
-  font-size: 1.8em;
-  clear: right;
-}
-
-nav[role="custom-dropdown"] input[type=checkbox]:checked ~ label:after {
-  color: rgb(255, 255, 255);
-  clear: both;
-}
-
-nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul {
-  display: block;
-  margin-top: 155px;
-  width: 100%;
-}
-
-nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul li {
-  width:100%;
-  opacity:.8;
-  text-align: left;
-}
-
-nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul li:after {
-  position:absolute;
-  right:.25em;
-  font: bold 1.4em sans-serif;
-}
-
-a, label {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font: 0.8em "Lato", sans-serif;
-  transition: color .3s ease-in-out;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  list-style: none;
-  background: rgba(0, 0, 0, 0.85);
-}
-
-ul > li {
-  float: left;
-  text-align: center;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-  cursor: pointer;
+nav {
   background: rgba(0, 0, 0, 0.75);
 }
 
-ul > li a {
-  padding: .8em 1.6em;
-  text-transform: uppercase;
-  display: block;
+.flexnav {
+  clear: both;
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
   width: 100%;
+}
+
+.flexnav ul {
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+}
+
+.flexnav li a {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-left: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.flexnav li a:hover {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.menu-button {
+  clear: both;
+  width: 100%;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
 }
 
 section {
@@ -197,12 +122,13 @@ section {
   flex-direction: column;
   align-items: center;
   background: rgb(245, 245, 245);
+  clear: both;
 }
 
 section header {
   margin-bottom: 30px;
   width: 100%;
-  height: 300px;
+  height: 350px;
   text-align: center;
 }
 
@@ -216,7 +142,7 @@ section header h1 {
 
 #home {
   height: 400px;
-  padding-top: 100px;
+  padding-top: 120px;
   background-image: url(../images/backgrounds/background-4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -291,9 +217,9 @@ section article div div {
 
 #about header h1 {
   margin-top: 0;
-  padding-top: 125px;
+  padding-top: 150px;
   width: 100%;
-  height: 300px;
+  height: 400px;
   background: rgba(0, 0, 0, 0.75);
   z-index: 98;
 }
@@ -315,9 +241,9 @@ section article div div {
 
 #skills header h1 {
   margin-top: 0;
-  padding-top: 125px;
+  padding-top: 150px;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: rgba(0, 0, 0, 0.75);
   z-index: 98;
 }
@@ -336,9 +262,9 @@ section article div div {
 
 #folio header h1 {
   margin-top: 0;
-  padding-top: 125px;
+  padding-top: 150px;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: rgba(0, 0, 0, 0.75);
   z-index: 98;
 }
@@ -418,9 +344,9 @@ section article div div {
 
 #contact header h1 {
   margin-top: 0;
-  padding-top: 125px;
+  padding-top: 150px;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: rgba(0, 0, 0, 0.75);
   z-index: 98;
 }
@@ -545,6 +471,149 @@ input[placeholder] {
   font-style: italic;
 }
 
+/* ********************************************************************
+*                         SITE BACKGROUND                             *
+********************************************************************* */
+
+#site-overlay {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    display: none;
+}
+
+/* ********************************************************************
+*                             SITE POPUPS                             *
+********************************************************************* */
+
+[id*=lightbox] {
+    padding: 0;
+    width: 940px;
+    height: 75%;
+    position: absolute;
+    margin-left: -470px;
+    top: 10%;
+    left: 50%;
+    z-index: 100;
+    display: none;
+    background: #FFF;
+    overflow-y: auto;
+    overflow-x: hidden;
+    clear: both;
+}
+
+[id*=lightbox] h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+[id*=lightbox] .row .col-md-4 {
+}
+
+[id*=lightbox] div span {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    padding-top: 5px;
+    padding-left: 5px;
+    background: #000;
+    color: #FFF;
+    position: absolute;
+    z-index: 102;
+    top: 0.5%;
+    left: 96%;
+    border: 3px solid #FFF;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
+[id*=lightbox] h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+[id*=lightbox] h3 {
+    margin-left: 40px;
+}
+
+[id*=lightbox] .row dl {
+    margin-left: 40px;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+[id*=lightbox] .row dt, dd {
+    float: left;
+}
+
+[id*=lightbox] .row dd {
+    padding-bottom: 10px;
+}
+
+[id*=lightbox] .col-md-4 h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    margin-top: 0;
+}
+
+[id*=lightbox] .col-md-8 ul {
+    margin-right: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+[id*=lightbox] .col-md-8 ul li {
+    margin-left: 0.25in;
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+[id*=lightbox] .col-md-8 ul li ul
+{
+    margin-top: 10px;
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+[id*=lightbox] .col-md-4 dt {
+    text-transform: uppercase;
+}
+
+[id*=lightbox] .col-md-8 {
+    border-left: 1px solid #AAA;
+}
+
+[id*=lightbox] .col-md-8 p {
+    margin-right: 40px;
+    font-size: 1.1em;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 30px;
+}
+
+[id*=lightbox] img {
+    margin-bottom: 20px;
+    width: 99%;
+    clear: both;
+    border: 1px solid #BBB;
+}
+
+[id*=lightbox] .col-md-8 img:nth-of-type(1) {
+    margin-top: 20px;
+}
+
+
 /* ******************** MEDIA QUERIES ********************* */
 
 @media screen and (max-width: 934px) {
@@ -614,28 +683,6 @@ input[placeholder] {
   header div div:nth-of-type(4) {
     margin-top: 13px;
     margin-bottom: -13px;
-  }
-
-  nav[role="custom-dropdown"] label:after {
-    position: absolute;
-    right: .25em;
-    top: 142px;
-    content: "\2261";
-    font-size: 1.8em;
-  }
-
-  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ label:after {
-    color: rgb(255, 255, 255);
-  }
-
-  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul {
-    display: block;
-    margin-top: 170px;
-    clear: both;
-  }
-
-  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul li {
-    width: 100%;
   }
 
   #about p:nth-child(3), #about p:nth-child(5) {
