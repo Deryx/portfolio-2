@@ -6,6 +6,11 @@ let portfolioModule = (function(){
     let windowWidth = window.screen.availWidth;
     let windowHeight = window.screen.availHeight;
 
+    $(".flexnav").flexNav();
+    $(".flexnav").flexNav({'animationSpeed' : 'fast'});
+
+    $('#site-overlay').css('height', windowHeight);
+
     /**********************************************************************
      *                          SECTION SCROLLER                          *
      **********************************************************************/
@@ -134,4 +139,20 @@ let portfolioModule = (function(){
     });
   });
 
+  $( 'a' ).on( 'click', function() {
+    var $lightbox = $( this );
+    var lightboxID = $lightbox.attr( 'id' );
+    console.log(lightboxID);
+    if( lightboxID > 0 ) {
+      $( '#site-overlay' ).show();
+      $( '[id*=lightbox]').removeClass('animated zoomOut');
+      $( '#lightbox-' + lightboxID ).show().addClass('animated zoomIn');
+    }
+  });
+
+  $( '#site-overlay' ).on( 'click', function() {
+      $( '[id*=lightbox]:visible').removeClass('animated zoomIn');
+      $( '[id*=lightbox]:visible').fadeOut(1000);
+      $( this ).hide();
+  });
 }());
